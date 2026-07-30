@@ -1,4 +1,5 @@
 import type { Article, Category } from './types';
+import { applyExpansions } from './expansions';
 
 /**
  * xad.es editorial library — original, independent, plain-English technology
@@ -303,6 +304,8 @@ export const ARTICLES: Article[] = [
     ],
   },
 ];
+
+applyExpansions(ARTICLES);
 
 export function getArticle(slug: string): Article | undefined {
   return ARTICLES.find((a) => a.slug === slug);
