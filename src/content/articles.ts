@@ -1,5 +1,12 @@
 import type { Article, Category } from './types';
 import { applyExpansions } from './expansions';
+import { NEW_ARTICLES_01 } from './articles-new-01';
+import { NEW_ARTICLES_02 } from './articles-new-02';
+import { NEW_ARTICLES_03 } from './articles-new-03';
+import { NEW_ARTICLES_04 } from './articles-new-04';
+import { NEW_ARTICLES_05 } from './articles-new-05';
+import { NEW_ARTICLES_06 } from './articles-new-06';
+import { NEW_ARTICLES_07 } from './articles-new-07';
 
 /**
  * xad.es editorial library — original, independent, plain-English technology
@@ -305,6 +312,7 @@ export const ARTICLES: Article[] = [
   },
 ];
 
+ARTICLES.push(...NEW_ARTICLES_01, ...NEW_ARTICLES_02, ...NEW_ARTICLES_03, ...NEW_ARTICLES_04, ...NEW_ARTICLES_05, ...NEW_ARTICLES_06, ...NEW_ARTICLES_07);
 applyExpansions(ARTICLES);
 
 export function getArticle(slug: string): Article | undefined {
